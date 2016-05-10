@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Microsoft yahei';
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+#top {
+    width: 100%;
+    height: 30px;
+    background: #fbfbfb;
+}
+
+#top .content {
+    width: 1200px;
+    height: 30px;
+    background: #fbfbfb;
+    margin: 0 auto;
+}
+
+#top .content_l i.foot {
+    float: left;
+    width: 18px;
+    height: 17px;
+    margin: 7px 0 0 0;
+    background: url("../images/foot.png") no-repeat center center;
+}
+
+#top .content_l span.logo {
+    float: left;
+    line-height: 30px;
+    margin: 0 6px;
+}
+
+#top .content_l a.logo_link,
+#top .content_l a.logo_link:hover {
+    color: #9345fc;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
