@@ -1,6 +1,6 @@
 $(function () {
 	/**
-	 * º£±¨*/
+	 * æµ·æŠ¥*/
 	var bill = $('#bill');
 
 	bill.on('mouseover', function () {
@@ -20,7 +20,7 @@ $(function () {
 	});
 
 	/**
-	 * ÍÆ¼ö´ËÕ¾*/
+	 * æ¨èæ­¤ç«™*/
 	var recommendBtn = '#top .content_l ul li.item3';
 	$(recommendBtn).on('mouseover', function () {
 		$('#recommend').stop().slideDown('fast');
@@ -29,10 +29,10 @@ $(function () {
 	});
 
 	/**
-	 * ±êÌâÀ¸*/
+	 * æ ‡é¢˜æ */
 	var headbarList = '#main #headbar ul.headbar_list';
 
-	//Çå³ıËùÓĞ±êÌâÀ¸ÑùÊ½
+	//æ¸…é™¤æ ‡é¢˜æ çš„æ‰€æœ‰æ ·å¼
 	var clearHeadbarStyle = function () {
 		$(headbarList).find('li').each(function (index, docEle) {
 			$(docEle).find('span.line').not('span.line_focus').stop().animate({width: '0'}, 200);
