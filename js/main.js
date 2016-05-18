@@ -1,6 +1,7 @@
 $(function () {
 	/**
-	 * 海报*/
+	 * 海报
+	 * */
 	var bill = $('#bill');
 
 	bill.on('mouseover', function () {
@@ -19,8 +20,10 @@ $(function () {
 		}, 'fast');
 	});
 
+
 	/**
-	 * 推荐此站*/
+	 * 推荐此站
+	 * */
 	var recommendBtn = '#top .content_l ul li.item3';
 	$(recommendBtn).on('mouseover', function () {
 		$('#recommend').stop().slideDown('fast');
@@ -28,8 +31,10 @@ $(function () {
 		$('#recommend').stop().slideUp('fast');
 	});
 
+
 	/**
-	 * 标题栏*/
+	 * 标题栏
+	 * */
 	var headbarList = '#main #headbar ul.headbar_list';
 
 	//清除标题栏的所有样式
@@ -50,6 +55,113 @@ $(function () {
 		}).on('mouseout', function () {
 			clearHeadbarStyle();
 		});
+	});
+
+
+	/**
+	 * 手绘
+	 * */
+	var freehand = $('#freehand');
+	var bannerWrapper = freehand.find('.banner_wrapper');
+	var dotList = freehand.find('#dot_list');
+	var bannerList = freehand.find('.banner_list');
+	var bannerWidth = bannerList.find('li').width();
+	var bannerInterval = null;
+
+	var bannerChangeAuto = function () {
+		if(bannerIndex < parseInt(dotList.find('li').size() - 1)) {
+			bannerIndex++;
+		}else {
+			bannerIndex = 0;
+		}
+
+		dotList.find('li').eq(bannerIndex).addClass('dot_active').siblings().removeClass('dot_active');
+
+		var bannerL = bannerWidth*bannerIndex;
+		bannerWrapper.animate({'left': -bannerL + 'px'}, 500);
+	};
+
+	dotList.find('li').on('mouseover', function () {
+		clearInterval(bannerInterval);
+
+		var i = $(this).index();
+		var bannerL = bannerWidth*i;
+		var _this = $(this);
+
+		bannerWrapper.animate({'left': -bannerL + 'px'}, 500);
+		_this.addClass('dot_active').siblings().removeClass('dot_active');
+	}).on('mouseout', function () {
+		//console.log($(this).index());
+		//bannerInterval = setInterval(bannerChangeAuto, 3000);
+		var outIndex = $(this).index();
+
+		bannerInterval = setInterval(function () {
+
+			if(outIndex < parseInt(dotList.find('li').size() - 1)) {
+				outIndex++
+			}else {
+				outIndex = 0;
+			}
+
+			dotList.find('li').eq(outIndex).addClass('dot_active').siblings().removeClass('dot_active');
+
+			var bannerL = bannerWidth*outIndex;
+			bannerWrapper.animate({'left': -bannerL + 'px'}, 500);
+		}, 3000);
+
+	});
+
+	var bannerIndex = 0;
+	bannerInterval = setInterval(bannerChangeAuto, 3000);
+
+
+	/**
+	 * 宠物用品热卖 推广链接
+	 * */
+	var spreadLayer = '#main .main_r .pets_goods_spread ul li span.spread_layer';
+
+	$(spreadLayer).on('mouseover', function () {
+		$(spreadLayer).each(function (index, docEle) {
+			$(docEle).css('display', 'block');
+		});
+		//console.log('mouseover');
+
+		$(this).css('display', 'none')
+			.prev('a')
+			.on('mouseout', function () {
+				//console.log('mouseout');
+				//console.log($(this));
+				$(this).next('span.spread_layer').css('display', 'block')
+			});
+	});
+
+
+
+	/**
+	 * 宠物贴子 和宠物的点点滴滴
+	 * */
+	// tab选项卡
+	var petsPost = {
+		nav: '#main .main_r .pets_post_tab ul.post_tab_nav li',
+		cont: '#main .main_r .pets_post .pets_post_tab ul.post_tab_content li.post_content_item',
+		index: null,
+		_this: null
+	};
+
+	$(petsPost.nav).on('click', function () {
+		petsPost._this = $(this);
+		petsPost.index = petsPost._this.index();
+
+		petsPost._this
+			.addClass('post_nav_active')
+			.siblings()
+			.removeClass('post_nav_active');
+
+		$(petsPost.cont)
+			.eq(petsPost.index)
+			.addClass('post_content_active')
+			.siblings()
+			.removeClass('post_content_active');
 	});
 
 });
