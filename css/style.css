@@ -534,7 +534,7 @@ a:hover {
 #main .main_r .pets_goods .pets_goods_spread {
     width: 698px;
     height: 305px;
-    background: lightgreen;
+    /*background: lightgreen;*/
     clear: both;
     overflow: hidden;
 }
