@@ -1044,7 +1044,7 @@ a:hover {
     width: 113px;
     height: 98px;
     background: url("../images/rabbits/r_04.jpg") no-repeat center center;
-    margin: 1px 1px 0 0;
+    /*margin: 1px 1px 0 0;*/
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -1070,7 +1070,7 @@ a:hover {
     width: 156px;
     height: 98px;
     background: url("../images/rabbits/r_05.jpg") no-repeat center center;
-    margin-top: 1px;
+    /*margin-top: 1px;*/
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -1102,7 +1102,7 @@ a:hover {
     width: 208px;
     height: 129px;
     background: url("../images/rabbits/r_06.png") no-repeat center center;
-    margin-top: 1px;
+    /*margin-top: 1px;*/
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
