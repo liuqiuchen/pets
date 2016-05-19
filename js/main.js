@@ -164,6 +164,43 @@ $(function () {
 			.removeClass('post_content_active');
 	});
 
+
+	/**
+	 * 一周图集
+	 * */
+	var weekPic = {
+		weekPicList: '#main .main_r .week_pic_cont ul.week_pic_total ul.week_pic_branches',
+		item1: $(this).find('li.week_pic_item1'),
+		item4: $(this).find('li.week_pic_item4'),
+		item7: $(this).find('li.week_pic_item7'),
+		toggleTips: function (obj) {
+			obj.on('mouseover', function () {
+				$(this).find('span.week_tips')
+					.stop()
+					.animate({
+						'bottom': '0'
+					}, 'normal');
+			}).on('mouseout', function () {
+				$(this).find('span.week_tips')
+					.stop()
+					.animate({
+						'bottom': '-40px'
+					}, 'normal');
+			});
+		}
+	};
+
+	weekPic.toggleTips(weekPic.item1);
+	weekPic.toggleTips(weekPic.item4);
+	weekPic.toggleTips(weekPic.item7);
+
+	/**
+	 * 设置图片延迟加载
+	 * */
+	$("img.lazy").lazyload({
+		effect: 'fadeIn'
+	});
+
 });
 
 

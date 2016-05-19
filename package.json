@@ -1,0 +1,22 @@
+{
+  "name": "pets",
+  "version": "1.0.0",
+  "description": "宠物网",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuqiuchen/pets.git"
+  },
+  "author": "liuqiuchen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuqiuchen/pets/issues"
+  },
+  "homepage": "https://github.com/liuqiuchen/pets#readme",
+  "devDependencies": {
+    "jquery-lazyload": "^1.9.7"
+  }
+}

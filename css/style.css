@@ -1,17 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-    font-family: 'Microsoft yahei';
-    color: #666666;
-    list-style: none;
-}
-
-a,
-a:hover {
-    text-decoration: none;
-}
-
 #top {
     width: 100%;
     height: 30px;
@@ -1140,6 +1126,110 @@ a:hover {
     background: url("../images/rabbits/r_07.jpg") no-repeat center center;
     margin-top: 1px;
 }
+
+#main .main_r .week_pic_cont ul.week_pic_total ul.week_pic_branches li.week_pic_item1,
+#main .main_r .week_pic_cont ul.week_pic_total ul.week_pic_branches li.week_pic_item4,
+#main .main_r .week_pic_cont ul.week_pic_total ul.week_pic_branches li.week_pic_item7 {
+    position: relative;
+}
+
+#main .main_r .week_pic_cont ul.week_pic_branches li.week_pic_item1 .week_tips,
+#main .main_r .week_pic_cont ul.week_pic_branches li.week_pic_item4 .week_tips,
+#main .main_r .week_pic_cont ul.week_pic_branches li.week_pic_item7 .week_tips {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #f9f9f9;
+    font-size: 14px;
+    color: #666666;
+    font-weight: bold;
+    padding-left: 20px;
+    display: block;
+}
+
+/*宠物与主人 视频*/
+#main .main_r .pets_master {
+    margin-top: 40px;
+}
+
+#main .main_r .pets_master .pets_master_title {
+    width: 100%;
+    height: 21px;
+    margin-bottom: 20px;
+}
+
+#main .main_r .pets_master .pets_master_title h1 {
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+}
+
+#main .main_r .pets_master .pets_master_title h2 {
+    font-size: 12px;
+    font-weight: normal;
+    float: left;
+    margin: 4px 0 0 15px;
+}
+
+#main .main_r .pets_master .pets_master_title a {
+    float: right;
+    margin: 4px;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+
+#main .main_r .pets_master .pets_master_title a:hover {
+    color: #9a9aa6;
+}
+
+#main .main_r .pets_master .pets_master_cont {
+    clear: both;
+}
+
+#main .main_r .pets_master .pets_master_cont li {
+    float: left;
+    margin-right: 30px;
+}
+
+#main .main_r .pets_master .pets_master_cont li.pm_last_item {
+    margin-right: 0;
+}
+
+#main .main_r .pets_master .pets_master_cont li div.pm_pic {
+    width: 150px;
+    height: 100px;
+}
+
+#main .main_r .pets_master .pets_master_cont li p.pm_explain {
+    width: 150px;
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+#main .main_r .pets_master .pets_master_cont li p.pm_explain a:hover {
+    color: #458bff;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
