@@ -240,9 +240,9 @@
 }
 
 #main {
-    width: 1000px;
+    width: 1070px;
     height: auto;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #main #headbar {
@@ -1152,7 +1152,9 @@
 
 /*宠物与主人 视频*/
 #main .main_r .pets_master {
-    margin-top: 40px;
+    margin: 40px 0 100px 0;
+    width: 100%;
+    height: 190px;
 }
 
 #main .main_r .pets_master .pets_master_title {
@@ -1227,11 +1229,31 @@
     cursor: pointer;
 }
 
+/*底部*/
+#footer {
+    clear: both;
+    border-top: 1px solid #cccccc;
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    padding: 20px 0 200px 0;
+    text-align: center;
+}
 
+#footer p.pets_web {
+    color: #a0a0a0;
+    margin-top: 10px;
+}
 
-
-
-
+/*回到顶部按钮，切忌初始化不要用float、position(absolute,relative,fixed)等脱离文档的定位*/
+#to_top {
+    width: 50px;
+    height: 50px;
+    margin: 500px 0 0 1020px;
+    background: #efefef;
+    /*position: fixed;*/
+    /*top: 0;*/
+}
 
 
 

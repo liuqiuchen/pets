@@ -227,6 +227,35 @@ $(function () {
 			});
 	});
 
+
+	/**
+	 * 回到顶部
+	 * */
+	var toTopDistance = 700;
+
+	//侦听滚动事件
+	$(window).on('scroll', function () {
+		//console.log($(document).scrollTop());
+		//console.log(toTopDistance);
+
+		/**
+		 * 滚到一定程度，回到顶部按钮一直显示在右上方*/
+		if($(document).scrollTop() >= toTopDistance) {
+
+			$('#to_top').css({
+				'position': 'fixed',
+				'top': 0,
+				'margin': '0 0 0 1020px'
+			});
+
+		}else {
+			$('#to_top').css({
+				'position': 'static',
+				'margin': '500px 0 0 1020px'
+			});
+		}
+	});
+
 });
 
 
