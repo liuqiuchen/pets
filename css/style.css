@@ -1201,6 +1201,7 @@
 #main .main_r .pets_master .pets_master_cont li div.pm_pic {
     width: 150px;
     height: 100px;
+    position: relative;
 }
 
 #main .main_r .pets_master .pets_master_cont li p.pm_explain {
@@ -1214,8 +1215,17 @@
     text-decoration: underline;
 }
 
-
-
+#main .main_r .pets_master_cont i.play_icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background: url("../images/play.png") no-repeat center center;
+    position: absolute;
+    left: 60px;
+    /*bottom: 34px;*/
+    bottom: 0;
+    cursor: pointer;
+}
 
 
 

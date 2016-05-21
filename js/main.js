@@ -201,6 +201,32 @@ $(function () {
 		effect: 'fadeIn'
 	});
 
+	/**
+	 * 宠物与主人 视频*/
+	var petsMaster = {
+		picWrapper: '#main .main_r .pets_master .pets_master_cont li div.pm_pic',
+		playBtn: 'i.play_icon'
+	};
+
+	$(petsMaster.picWrapper).on('mouseover', function () {
+		$(this)
+			.find(petsMaster.playBtn)
+			.css('display', 'block')
+			.stop()
+			.animate({
+				'bottom': '34px'
+			}, 100);
+	}).on('mouseout', function () {
+		$(this)
+			.find(petsMaster.playBtn)
+			.stop()
+			.animate({
+				'bottom': '0'
+			}, 100, function () {
+				$(this).css('display', 'none');
+			});
+	});
+
 });
 
 
