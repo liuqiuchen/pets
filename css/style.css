@@ -1247,15 +1247,23 @@
 
 /*回到顶部按钮，切忌初始化不要用float、position(absolute,relative,fixed)等脱离文档的定位*/
 #to_top {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin: 500px 0 0 1020px;
     background: #efefef;
     /*position: fixed;*/
     /*top: 0;*/
+    padding: 10px;
+    cursor: pointer;
 }
 
-
+#to_top i.to_top_pic {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url("../images/totop.png") no-repeat center center;
+    /*margin: 10px 10px 0 10px;*/
+}
 
 
 

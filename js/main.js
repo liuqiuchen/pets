@@ -231,7 +231,13 @@ $(function () {
 	/**
 	 * 回到顶部
 	 * */
-	var toTopDistance = 700;
+	var toTop = {
+		distance: 700,
+		btn: $('#to_top'),
+		speed: 10,
+		sum: 1,
+		toTopInterval: null
+	};
 
 	//侦听滚动事件
 	$(window).on('scroll', function () {
@@ -240,7 +246,7 @@ $(function () {
 
 		/**
 		 * 滚到一定程度，回到顶部按钮一直显示在右上方*/
-		if($(document).scrollTop() >= toTopDistance) {
+		if($(document).scrollTop() >= toTop.distance) {
 
 			$('#to_top').css({
 				'position': 'fixed',
@@ -254,6 +260,27 @@ $(function () {
 				'margin': '500px 0 0 1020px'
 			});
 		}
+	});
+
+	// 回到顶部
+	toTop.btn.on('click', function () {
+		clearInterval(toTop.toTopInterval);
+
+		toTop.toTopInterval = setInterval(function () {
+			toTop.sum++;
+
+			var scrollTop = $(document).scrollTop();
+			if(scrollTop > 0) {
+				scrollTop -= toTop.speed * toTop.sum;
+			}else if(scrollTop == 0) {
+				clearInterval(toTop.toTopInterval);
+				//初始化累加的总和
+				toTop.sum = 1;
+			}
+
+			$(document).scrollTop(scrollTop);
+		}, 35);
+
 	});
 
 });
